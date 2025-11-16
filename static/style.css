@@ -1,0 +1,128 @@
+/* style.css (Tema Hitam Elegan) */
+
+/* Warna Dasar */
+:root {
+    --color-background-pekat: #121212; /* Hitam Pekat */
+    --color-text-terang: #E0E0E0; /* Putih terang/Abu muda */
+    --color-primary-accent: #007BFF; /* Biru Primer (untuk fokus/hover) */
+    --color-button-dark: #1A3E5A; /* Biru Gelap - untuk tombol */
+    --color-border: #333333; /* Abu Gelap untuk border */
+    --color-error: #FF4444; /* Merah untuk pesan error */
+    --color-success: #4CAF50; /* Hijau untuk pesan sukses */
+    --color-info: #2196F3; /* Biru terang untuk pesan info */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background-pekat);
+    color: var(--color-text-terang);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: #1E1E1E; /* Sedikit lebih terang dari background utama */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Bayangan yang lebih dramatis */
+    width: 320px;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-2px); /* Efek minor saat disentuh mouse */
+}
+
+/* Judul */
+h2 {
+    text-align: center;
+    color: var(--color-text-terang);
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: var(--color-text-terang);
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: var(--color-background-pekat);
+    color: var(--color-text-terang);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: var(--color-primary-accent); /* Border biru saat fokus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Tombol Submit */
+button[type="submit"] {
+    background-color: var(--color-button-dark);
+    color: var(--color-text-terang);
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-primary-accent); /* Biru terang saat hover */
+    transform: translateY(-1px);
+}
+
+/* =================================== */
+/* STYLING KHUSUS FLASK FLASH MESSAGES */
+/* =================================== */
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.flashes li {
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.flashes .error {
+    background-color: rgba(255, 68, 68, 0.2); /* Background merah transparan */
+    color: var(--color-error);
+    border: 1px solid var(--color-error);
+}
+
+.flashes .success {
+    background-color: rgba(76, 175, 80, 0.2); /* Background hijau transparan */
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+}
+
+.flashes .info {
+    background-color: rgba(33, 150, 243, 0.2); /* Background biru transparan */
+    color: var(--color-info);
+    border: 1px solid var(--color-info);
+}
