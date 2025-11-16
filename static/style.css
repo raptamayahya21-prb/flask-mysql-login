@@ -1,5 +1,5 @@
 
-:root { /* ganti warna sesuai selera */
+:root { /* ntar kalau warnanya kurang cocok di ganti aja */
     --color-background-pekat: #121212; 
     --color-text-terang: #E0E0E0;
     --color-primary-accent: #007BFF; 
@@ -118,3 +118,4 @@ button[type="submit"]:hover {
     border: 1px solid var(--color-info);
 
 }
+
